@@ -1,19 +1,23 @@
+// ---------- Challenge 07 ----------
+
 function contains(store, product) {
   return search(store, product);
 }
 
 function search(object, value) {
-  for(let key in object){
+  for (let key in object) {
     if (typeof object[key] === "object") {
-      if(search(object[key], value)){
+      if (search(object[key], value)) {
         return true;
       }
     } else if (object[key] === value) {
       return true;
     }
-  };
+  }
   return false;
 }
+
+// ---------- Challenge 07 ----------
 
 const almacen = {
   estanteria1: {

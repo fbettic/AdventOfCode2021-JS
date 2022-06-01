@@ -1,11 +1,14 @@
+// ---------- Challenge 20 ----------
+
 function pangram(letter) {
   let normalizeLetter = letter
     .normalize("NFD")
     .replace(/[ \u0300-\u0301]/g, "")
     .toLowerCase()
-    .normalize("NFC").split("");
+    .normalize("NFC")
+    .split("");
 
-    console.log(normalizeLetter)
+  console.log(normalizeLetter);
   let charList = [];
 
   const isValidChar = /[a-zñ]/;
@@ -18,6 +21,8 @@ function pangram(letter) {
 
   return charList.length === 27 ? true : false;
 }
+
+// ---------- Challenge 20 ----------
 
 console.log(pangram("Extraño pan de col y kiwi se quemó bajo fugaz vaho")); // true
 console.log(

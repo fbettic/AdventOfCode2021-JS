@@ -1,3 +1,5 @@
+// ---------- Challenge 04 ----------
+
 function createXmasTree(height) {
   let tree = "";
 
@@ -6,14 +8,14 @@ function createXmasTree(height) {
     tree = space + "*".repeat(i * 2 - 1) + space + "\n" + tree;
   }
 
-
   let space = "_".repeat(height - 1);
   tree = tree + space + "#" + space + "\n";
-  tree = tree + space + "#" + space
-  
+  tree = tree + space + "#" + space;
 
   return tree;
 }
+
+// ---------- Challenge 04 ----------
 
 console.log(createXmasTree(10));
 

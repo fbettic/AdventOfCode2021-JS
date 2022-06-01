@@ -1,28 +1,29 @@
-function getMinJump(obstacles) {
-  //let route = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+// ---------- Challenge 12 ----------
 
-  
-  let jumpLength=0;
+function getMinJump(obstacles) {
+  let jumpLength = 0;
   for (let jump = 1; jump < 11; jump++) {
     let length = 0;
     let isValid = true;
 
-    while (length<10) {
-      length+=jump;
-      if(obstacles.includes(length)){
-        isValid=false;
+    while (length < 10) {
+      length += jump;
+      if (obstacles.includes(length)) {
+        isValid = false;
         break;
       }
     }
 
-    if(isValid){
-      jumpLength=jump;
+    if (isValid) {
+      jumpLength = jump;
       break;
     }
   }
 
   return jumpLength;
 }
+
+// ---------- Challenge 12 ----------
 
 const obstacles = [9, 5, 1];
 console.log(getMinJump(obstacles)); // -> 4

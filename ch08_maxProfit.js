@@ -1,3 +1,5 @@
+// ---------- Challenge 08 ----------
+
 function maxProfit(prices) {
   let bestProfit = 0;
   for (let i = 0; i < prices.length - 1; i++) {
@@ -12,6 +14,8 @@ function maxProfit(prices) {
 
   return bestProfit > 0 ? bestProfit : -1;
 }
+
+// ---------- Challenge 08 ----------
 
 const pricesBtc = [39, 18, 29, 25, 34, 32, 5];
 const pricesEth = [10, 20, 30, 40, 50, 60, 70];

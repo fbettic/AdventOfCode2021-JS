@@ -1,22 +1,24 @@
+// ---------- Challenge 19 ----------
+
 function learn(time, courses) {
   let coursesTime = [];
 
-  let totalTime=0;
+  let totalTime = 0;
   for (let i = 0; i < courses.length - 1; i++) {
-    
     for (let j = i + 1; j < courses.length; j++) {
       let timeTemp = courses[i] + courses[j];
 
       if (timeTemp <= time && timeTemp > totalTime) {
         coursesTime = [i, j];
-        totalTime=timeTemp;
+        totalTime = timeTemp;
       }
     }
   }
 
- 
-  return coursesTime.length===0?null:coursesTime;
+  return coursesTime.length === 0 ? null : coursesTime;
 }
+
+// ---------- Challenge 19 ----------
 
 console.log(learn(10, [2, 3, 8, 1, 4])); // [0, 2] -> con 10 horas disponibles lo mejor es que completemos los cursos en el índice 0 y 2.
 

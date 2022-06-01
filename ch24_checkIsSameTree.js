@@ -1,9 +1,11 @@
+// ---------- Challenge 24 ----------
+
 function checkIsSameTree(treeA, treeB) {
   return search(treeA, treeB);
 }
 
 function search(treeA, treeB) {
-  if(treeA.value !== treeB.value){
+  if (treeA.value !== treeB.value) {
     return false;
   }
 
@@ -31,6 +33,8 @@ function search(treeA, treeB) {
 
   return true;
 }
+
+// ---------- Challenge 24 ----------
 
 const tree = {
   value: 1,

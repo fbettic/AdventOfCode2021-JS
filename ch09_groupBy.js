@@ -1,6 +1,8 @@
-function groupBy(collection, it) {
+// ---------- Challenge 09 ----------
 
-  let keys = [], entries = [];
+function groupBy(collection, it) {
+  let keys = [],
+    entries = [];
 
   collection.forEach((item) => {
     let key;
@@ -11,23 +13,32 @@ function groupBy(collection, it) {
     }
 
     if (keys.includes(key)) {
-      entries[keys.findIndex(e=>e===key)].push(item);
+      entries[keys.findIndex((e) => e === key)].push(item);
     } else {
       keys.push(key);
       entries.push([item]);
     }
   });
 
-  return Object.fromEntries(keys.map((key,index)=>{
-    return [key, entries[index]];
-  }));
+  return Object.fromEntries(
+    keys.map((key, index) => {
+      return [key, entries[index]];
+    })
+  );
 }
 
-console.log(groupBy([
-  { title: 'JavaScript: The Good Parts', rating: 8 },
-  { title: 'Aprendiendo Git', rating: 10 },
-  { title: 'Clean Code', rating: 9 },
-], 'rating'));
+// ---------- Challenge 09 ----------
+
+console.log(
+  groupBy(
+    [
+      { title: "JavaScript: The Good Parts", rating: 8 },
+      { title: "Aprendiendo Git", rating: 10 },
+      { title: "Clean Code", rating: 9 },
+    ],
+    "rating"
+  )
+);
 //console.log("hello"["length"])
 /*
 groupBy([6.1, 4.2, 6.3], Math.floor) // { 6: [6.1, 6.3], 4: [4.2] }

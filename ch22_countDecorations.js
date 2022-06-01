@@ -1,18 +1,21 @@
+// ---------- Challenge 22 ----------
+
 function countDecorations(bigTree) {
-  return search(bigTree,0);
+  return search(bigTree, 0);
 }
 
-function search(tree, deco){
-  deco+=tree.value;
-  if(tree.left!==null){
-    deco=search(tree.left,deco);
+function search(tree, deco) {
+  deco += tree.value;
+  if (tree.left !== null) {
+    deco = search(tree.left, deco);
   }
-  if(tree.right!==null){
-    deco=search(tree.right,deco);
+  if (tree.right !== null) {
+    deco = search(tree.right, deco);
   }
-  return deco
+  return deco;
 }
 
+// ---------- Challenge 22 ----------
 
 // tenemos el árbol en forma de objeto
 const tree = {
@@ -20,14 +23,14 @@ const tree = {
   left: {
     value: 2, // el nodo izquierdo necesita dos decoraciones
     left: null, // no tiene más ramas
-    right: null // no tiene más ramas
+    right: null, // no tiene más ramas
   },
   right: {
     value: 3, // el nodo de la derecha necesita tres decoraciones
     left: null, // no tiene más ramas
-    right: null // no tiene más ramas
-  }
-}
+    right: null, // no tiene más ramas
+  },
+};
 
 /* Gráficamente sería así:
     1
@@ -48,26 +51,26 @@ const bigTree = {
       left: {
         value: 3,
         left: null,
-        right: null
+        right: null,
       },
-      right: null
+      right: null,
     },
-    right: null
+    right: null,
   },
   right: {
     value: 6,
     left: {
       value: 5,
       left: null,
-      right: null
+      right: null,
     },
     right: {
       value: 1,
       left: null,
-      right: null
-    }
-  }
-}
+      right: null,
+    },
+  },
+};
 
 /*
         1

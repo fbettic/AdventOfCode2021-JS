@@ -1,3 +1,5 @@
+// ---------- Challenge 13 ----------
+
 function wrapGifts(gifts) {
   let box = ["*" + "*".repeat(gifts[0].length) + "*"];
 
@@ -9,9 +11,11 @@ function wrapGifts(gifts) {
   return box;
 }
 
+// ---------- Challenge 13 ----------
+
 console.log(wrapGifts(["🏈🎸", "🎮🧸"]));
 
-wrapGifts(["📷", "⚽️"]);
+console.log(wrapGifts(["📷", "⚽️"]));
 /* Resultado:
 [ '****',
   '*📷*',
@@ -20,7 +24,7 @@ wrapGifts(["📷", "⚽️"]);
 ]
 */
 
-wrapGifts(["🏈🎸", "🎮🧸"]);
+console.log(wrapGifts(["🏈🎸", "🎮🧸"]));
 /* Resultado:
 [ '******',
   '*🏈🎸*',
@@ -29,7 +33,7 @@ wrapGifts(["🏈🎸", "🎮🧸"]);
 ]
 */
 
-wrapGifts(["📷"]);
+console.log(wrapGifts(["📷"]));
 /* Resultado:
 [ '****',
   '*📷*',

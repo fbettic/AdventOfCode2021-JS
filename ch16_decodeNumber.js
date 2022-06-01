@@ -1,36 +1,37 @@
+// ---------- Challenge 16 ----------
+
 function decodeNumber(symbols) {
   const symbolsTable = {
     ".": 1,
     ",": 5,
     ":": 10,
     ";": 50,
-    "!": 100
+    "!": 100,
   };
 
-  if(symbols.length<2){
+  if (symbols.length < 2) {
     return symbolsTable[symbols[0]];
   }
 
   let number = 0;
-  for(let i=0; i<symbols.length-1; i++){
-    if(symbolsTable.hasOwnProperty(symbols[i])){
-      if(symbolsTable[symbols[i]]<symbolsTable[symbols[i+1]]){
-        number-=symbolsTable[symbols[i]];
-      }else{
-        number+=symbolsTable[symbols[i]];
+  for (let i = 0; i < symbols.length - 1; i++) {
+    if (symbolsTable.hasOwnProperty(symbols[i])) {
+      if (symbolsTable[symbols[i]] < symbolsTable[symbols[i + 1]]) {
+        number -= symbolsTable[symbols[i]];
+      } else {
+        number += symbolsTable[symbols[i]];
       }
     }
   }
 
-  number+=symbolsTable[symbols[symbols.length-1]];
+  number += symbolsTable[symbols[symbols.length - 1]];
 
-
-  return number
+  return number;
 }
 
+// ---------- Challenge 16 ----------
+
 console.log(decodeNumber(";.W"));
-
-
 
 /*
 

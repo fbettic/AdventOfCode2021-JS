@@ -1,3 +1,5 @@
+// ---------- Challenge 25 ----------
+
 function canMouseEat(direction, game) {
   const directions = {
     up: [-1, 0],
@@ -25,6 +27,8 @@ function canMouseEat(direction, game) {
   }
   return false;
 }
+
+// ---------- Challenge 25 ----------
 
 const room = [
   [" ", " ", " "],

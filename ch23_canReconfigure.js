@@ -1,3 +1,5 @@
+// ---------- Challenge 23 ----------
+
 function canReconfigure(from, to) {
   if (from.length !== to.length) {
     return false;
@@ -25,6 +27,8 @@ function canReconfigure(from, to) {
 
   return isValid;
 }
+
+// ---------- Challenge 23 ----------
 
 const from = "BAL";
 const to = "LIB";

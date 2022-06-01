@@ -1,13 +1,6 @@
-const ovejas = [
-  { name: "Noa", color: "azul" },
-  { name: "Euge", color: "rojo" },
-  { name: "Navidad", color: "rojo" },
-  { name: "Ki Na Ma", color: "rojo" },
-  { name: "AAAAAaaaaa", color: "rojo" },
-  { name: "Nnnnnnnn", color: "rojo" },
-];
+// ---------- Challenge 01 ----------
 
-function contarOvejas(ovejas) {
+function countSheep(ovejas) {
   var ovejasFiltradas = ovejas.filter(
     (oveja) =>
       oveja.color == "rojo" &&
@@ -17,8 +10,15 @@ function contarOvejas(ovejas) {
   return ovejasFiltradas;
 }
 
-const ovejasFiltradas = contarOvejas(ovejas);
+// ---------- Challenge 01 ----------
 
-console.log(ovejasFiltradas);
+const ovejas = [
+  { name: "Noa", color: "azul" },
+  { name: "Euge", color: "rojo" },
+  { name: "Navidad", color: "rojo" },
+  { name: "Ki Na Ma", color: "rojo" },
+  { name: "AAAAAaaaaa", color: "rojo" },
+  { name: "Nnnnnnnn", color: "rojo" },
+];
 
-
+console.log(contarOvejas(ovejas));

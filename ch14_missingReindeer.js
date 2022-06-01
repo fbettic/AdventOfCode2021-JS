@@ -1,8 +1,12 @@
+// ---------- Challenge 14 ----------
+
 function missingReindeer(ids) {
   let idsSum = ids.reduce((a, b) => a + b, 0);
-  let idlength = (ids.length * (ids.length + 1)) / 2
+  let idlength = (ids.length * (ids.length + 1)) / 2;
   return idlength - idsSum;
 }
+
+// ---------- Challenge 14 ----------
 
 console.log(missingReindeer([9, 8, 2, 3, 5, 6, 4, 7, 1]));
 /*

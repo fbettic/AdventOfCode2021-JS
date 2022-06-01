@@ -1,7 +1,9 @@
+// ---------- Challenge 03 ----------
+
 function isValid(letter) {
   let newLetter = letter.replace(/ /g, "");
 
-  if(newLetter.includes('()')){
+  if (newLetter.includes("()")) {
     return false;
   }
 
@@ -10,15 +12,14 @@ function isValid(letter) {
   let parenthesis = 0;
 
   charArray.map((c) => {
-
     switch (c) {
       case "(":
         parenthesis += 1;
         break;
       case ")":
-        if(parenthesis>0){
+        if (parenthesis > 0) {
           parenthesis -= 1;
-        }else{
+        } else {
           isValidLetter = false;
         }
         break;
@@ -29,15 +30,16 @@ function isValid(letter) {
         isValidLetter = false;
         break;
     }
-
   });
 
-  if(parenthesis!==0){
+  if (parenthesis !== 0) {
     isValidLetter = false;
   }
 
   return isValidLetter;
 }
+
+// ---------- Challenge 03 ----------
 
 /*
 "bici coche (balón) bici coche peluche" // -> ✅

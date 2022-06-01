@@ -1,17 +1,17 @@
-const carta = "bici coche balón  _playstation bici coche peluche";
+// ---------- Challenge 02 ----------
 
 function listGifts(letter) {
-  let gifts={};
-  
+  let gifts = {};
+
   let listGifts = letter
     .toLowerCase()
     .split(" ")
     .filter((gift) => gift !== "" && gift[0] !== "_");
 
-  listGifts.map(gift => {
-    if(gift in gifts){
+  listGifts.map((gift) => {
+    if (gift in gifts) {
       gifts[gift] = gifts[gift] + 1;
-    }else{
+    } else {
       gifts[gift] = 1;
     }
   });
@@ -19,6 +19,8 @@ function listGifts(letter) {
   return JSON.stringify(gifts);
 }
 
-const regalos = listGifts(carta);
+// ---------- Challenge 02 ----------
 
-console.log(regalos);
+const carta = "bici coche balón  _playstation bici coche peluche";
+
+console.log(listGifts(carta));

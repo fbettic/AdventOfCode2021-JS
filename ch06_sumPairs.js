@@ -1,3 +1,5 @@
+// ---------- Challenge 06 ----------
+
 function sumPairs(numbers, result) {
   let pair = [];
 
@@ -15,5 +17,7 @@ function sumPairs(numbers, result) {
   }
   return pair;
 }
+
+// ---------- Challenge 06 ----------
 
 console.log(sumPairs([2, 2, 3, 1], 4));
